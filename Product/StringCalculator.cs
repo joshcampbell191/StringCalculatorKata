@@ -25,7 +25,7 @@ namespace Product
             var delimiters = new HashSet<string>(["+", ",", "\n"]);
 
             // If the input defines a custom delimiter, add it to the list of delimiters
-            var match = Regex.Match(numbers, @"^\/\/(?<delimiter>[^\d]+)");
+            var match = Regex.Match(numbers, @"^\/\/(?<delimiter>.*?)-?\d+");
             if (match.Success)
             {
                 // Remove the delimiter from the input
