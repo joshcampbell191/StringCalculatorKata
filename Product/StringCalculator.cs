@@ -4,7 +4,10 @@
     {
         public int Add(string numbers)
         {
-            throw new NotImplementedException();
+            var delimiters = CalculatorHelper.ParseDelimiters(numbers);
+            var results = CalculatorHelper.ParseNumbers(numbers, delimiters);
+
+            return results.Sum();
         }
     }
 }
